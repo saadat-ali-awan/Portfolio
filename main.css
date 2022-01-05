@@ -1,9 +1,11 @@
 nav {
   display: flex;
   justify-content: space-between;
+  padding: 12px;
 }
 
 nav>p{
+  left: 12px;
   width: 90px;
   height: 28px;
   display: flex;
@@ -14,4 +16,75 @@ nav>p{
   font-weight: 600;
   line-height: 28px;
   color: #28352f;
+}
+
+nav > a {
+  margin: auto 0;
+}
+
+.headline {
+  background-image: url(img/header-illsutration-mobile.svg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 327px;
+  height: 192px;
+  left: 24px;
+  top: 64px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+
+  color: #172B4D;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 58px 0px;
+}
+header > span {
+  color: #36B37E;
+}
+
+.desc {
+  width: 327px;
+  height: 164px;
+    
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+    
+  text-align: center;
+    
+  color: #172B4D;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 58px;
+}
+
+.social-icons > img {
+  margin: 10px;
+}
+
+.down-btn {
+  border: 1px solid #DFE1E6;
+  border-radius: 32px;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
 }
