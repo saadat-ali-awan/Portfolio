@@ -4,7 +4,7 @@ nav {
   padding: 12px;
 }
 
-nav>p{
+nav > p {
   left: 12px;
   width: 90px;
   height: 28px;
@@ -34,37 +34,31 @@ header {
   height: 192px;
   left: 24px;
   top: 64px;
-
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
   line-height: 52px;
   text-align: center;
-
-  color: #172B4D;
-
+  color: #172b4d;
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin: 58px 0px;
+  margin: 58px 0;
 }
-header > span {
-  color: #36B37E;
+
+header > h2 {
+  color: #36b37e;
 }
 
 .desc {
   width: 327px;
   height: 164px;
-    
-  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 28px;
-    
   text-align: center;
-    
-  color: #172B4D;
+  color: #172b4d;
 }
 
 .social-icons {
@@ -78,7 +72,7 @@ header > span {
 }
 
 .down-btn {
-  border: 1px solid #DFE1E6;
+  border: 1px solid #dfe1e6;
   border-radius: 32px;
   padding: 8px;
   width: 40px;
