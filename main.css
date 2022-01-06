@@ -90,3 +90,9 @@ header > nav {
   align-items: center;
   margin-top: 80px;
 }
+
+
+.Works {
+  display: grid;
+  column-count: 1;
+}
