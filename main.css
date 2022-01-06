@@ -1,10 +1,14 @@
-nav {
+header {
   display: flex;
   justify-content: space-between;
   padding: 12px;
 }
 
-nav > p {
+header > a {
+  text-decoration: none;
+}
+
+header > a > p {
   left: 12px;
   width: 90px;
   height: 28px;
@@ -18,7 +22,7 @@ nav > p {
   color: #28352f;
 }
 
-nav > a {
+header > nav {
   margin: auto 0;
 }
 
@@ -29,10 +33,11 @@ nav > a {
   align-items: center;
 }
 
-header > h2 {
-  width: 327px;
+.headline-text > h1 {
+  width: 70vw;
   left: 24px;
   top: 64px;
+  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
@@ -45,13 +50,16 @@ header > h2 {
   margin: 58px 0;
 }
 
-header > h2 > span {
+.headline-text > h1 > span {
   color: #36b37e;
 }
 
 .desc {
-  width: 327px;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 70vw;
   height: 164px;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -64,9 +72,10 @@ header > h2 > span {
   display: flex;
   flex-direction: row;
   margin-top: 58px;
+  list-style: none;
 }
 
-.social-icons > img {
+.social-icons > li {
   margin: 10px;
 }
 
