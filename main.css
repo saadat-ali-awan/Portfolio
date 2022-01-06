@@ -217,7 +217,7 @@ button:active {
   flex-direction: column;
 }
 
-.section-heading > h1 {
+.section-heading > h2 {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -260,4 +260,11 @@ button:active {
   line-height: 32px;
   color: #344563;
   margin-top: 64px;
+}
+
+.indicator {
+  width: 48px;
+  height: 4px;
+  background: #36b37e;
+  border-radius: 24px;
 }
