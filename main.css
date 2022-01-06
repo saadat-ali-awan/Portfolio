@@ -29,9 +29,8 @@ nav > a {
   align-items: center;
 }
 
-header {
+header > h2 {
   width: 327px;
-  height: 192px;
   left: 24px;
   top: 64px;
   font-style: normal;
@@ -46,7 +45,7 @@ header {
   margin: 58px 0;
 }
 
-header > h2 {
+header > h2 >span {
   color: #36b37e;
 }
 
