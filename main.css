@@ -37,7 +37,7 @@ header > nav {
   width: 70vw;
   left: 24px;
   top: 64px;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
@@ -59,7 +59,7 @@ header > nav {
   margin-bottom: 0;
   width: 70vw;
   height: 164px;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
