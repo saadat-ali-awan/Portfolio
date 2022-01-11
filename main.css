@@ -71,6 +71,7 @@ header > nav {
   flex-direction: row;
   margin-top: 58px;
   list-style: none;
+  padding: 0;
 }
 
 .social-icons > li {
