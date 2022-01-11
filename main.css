@@ -4,11 +4,11 @@ header {
   padding: 12px;
 }
 
-header > a {
+header>a {
   text-decoration: none;
 }
 
-header > a > p {
+header>a>p {
   left: 12px;
   width: 90px;
   height: 28px;
@@ -22,7 +22,7 @@ header > a > p {
   color: #28352f;
 }
 
-header > nav {
+header>nav {
   margin: auto 0;
 }
 
@@ -34,7 +34,7 @@ header > nav {
   padding: 24px;
 }
 
-.headline-text > h1 {
+.headline-text>h1 {
   width: 70vw;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -49,7 +49,7 @@ header > nav {
   margin: 58px 0;
 }
 
-.headline-text > h1 > span {
+.headline-text>h1>span {
   color: #36b37e;
 }
 
@@ -74,7 +74,7 @@ header > nav {
   padding: 0;
 }
 
-.social-icons > li {
+.social-icons>li {
   margin: 10px;
 }
 
@@ -116,14 +116,14 @@ header > nav {
   border-radius: 8px;
 }
 
-.About > ul {
+.About>ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   padding: 0;
 }
 
-.About > ul > li {
+.About>ul>li {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -135,8 +135,8 @@ header > nav {
   margin: 12px;
 }
 
-.card-body > ul,
-.About > ul > li > ul {
+.card-body>ul,
+.About>ul>li>ul {
   list-style: none;
   display: flex;
   padding: 0;
@@ -145,15 +145,15 @@ header > nav {
   flex-wrap: wrap;
 }
 
-.card-body > ul > li {
+.card-body>ul>li {
   color: #3a4a42;
   padding: 8px 12px;
   background: #ebf0ee;
   border-radius: 4px;
 }
 
-.card-body > ul > li,
-.About > ul > li > ul > li {
+.card-body>ul>li,
+.About>ul>li>ul>li {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -170,7 +170,7 @@ header > nav {
   letter-spacing: 0.03em;
 }
 
-.card-body > h3 {
+.card-body>h3 {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -218,7 +218,7 @@ button:active {
   flex-direction: column;
 }
 
-.section-heading > h2 {
+.section-heading>h2 {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -236,7 +236,7 @@ button:active {
   padding-top: 30px;
 }
 
-.About > ul > li > img {
+.About>ul>li>img {
   width: 44px;
   height: 44px;
   background: #fff;
@@ -246,14 +246,14 @@ button:active {
   margin-top: 40px;
 }
 
-.About > ul > li > ul > li {
+.About>ul>li>ul>li {
   color: #36b37e;
   padding: 12px;
   background: #fff;
   border-radius: 8px;
 }
 
-.About > ul > li > h3 {
+.About>ul>li>h3 {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -274,10 +274,52 @@ button:active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 12px;
 }
 
-.contact-form > ul {
+.contact-form {
+  width: 100%;
+  display: flex;
+}
+
+.contact-form>ul {
   list-style: none;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-form>ul>li {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.contact-form>ul>li>input, .contact-form>ul>li>textarea {
+  width: 100%;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: #6B778C;
+  background: #FFFFFF;
+  border: 1px solid #D0D9D4;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.contact-form>ul>li>input:invalid, .contact-form>ul>li>textarea:invalid {
+  border: 1px solid red;
+}
+
+.contact-form>ul>li>textarea {
+  height: 114px;
 }
 
 .form-desc {
@@ -288,4 +330,14 @@ button:active {
   line-height: 52px;
   text-align: center;
   color: #172b4d;
+}
+
+.my-email {
+  height: 189px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;text-align: center;
+  color: #42526E;
 }
