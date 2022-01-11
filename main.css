@@ -279,3 +279,13 @@ button:active {
 .contact-form > ul {
   list-style: none;
 }
+
+.form-desc {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  color: #172b4d;
+}
