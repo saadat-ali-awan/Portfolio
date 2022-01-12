@@ -69,9 +69,16 @@ header > nav {
 .social-icons {
   display: flex;
   flex-direction: row;
-  margin-top: 58px;
   list-style: none;
   padding: 0;
+}
+
+.headline > .social-icons {
+  margin-top: 58px;
+}
+
+.footer > .social-icons {
+  margin-top: 24px;
 }
 
 .social-icons > li {
@@ -304,7 +311,7 @@ button:active {
 .contact-form > ul > li > input,
 .contact-form > ul > li > textarea {
   width: 100%;
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
