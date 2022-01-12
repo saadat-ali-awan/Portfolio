@@ -474,7 +474,7 @@ footer {
     padding-left: 10% !important;
     padding-right: 10% !important;
   }
-  
+
   .form {
     display: flex;
     flex-direction: row;
@@ -505,7 +505,7 @@ footer {
     flex: 6;
   }
 
-  .form > form > ul  > li {
+  .form > form > ul > li {
     justify-content: flex-start;
   }
 }
