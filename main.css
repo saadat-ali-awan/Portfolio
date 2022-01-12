@@ -402,6 +402,12 @@ footer {
     color: #344563;
   }
 
+  footer > .social-icons {
+    padding: 13px;
+    margin-bottom: 0;
+    border-top: 1px solid #dfe1e6;
+  }
+
   .headline > .social-icons {
     margin-top: 36px;
   }
@@ -463,7 +469,8 @@ footer {
     box-sizing: border-box;
   }
 
-  body > section, .form {
+  body > section,
+  .form {
     padding-left: 10% !important;
     padding-right: 10% !important;
   }
@@ -471,10 +478,7 @@ footer {
   .form {
     display: flex;
     flex-direction: row;
-    background-repeat: no-repeat;
-    background-image: url(img/illustration-1-contact-form-desktop.svg),
-    url(img/illustration-2-contact-form-desktop.svg),
-    url(img/contact\ form-illustratoin-3-desktop.svg);
+    background-image: url(img/illustration-1-contact-form-desktop.svg), url(img/illustration-2-contact-form-desktop.svg), url(img/contact\ form-illustratoin-3-desktop.svg);
     background-position-x: left, center, right;
     background-position-y: bottom, bottom, bottom;
     background-repeat: no-repeat;
@@ -496,6 +500,7 @@ footer {
     line-height: 52px;
     margin-right: 24px;
   }
+
   .form > form {
     flex: 6;
   }
@@ -503,11 +508,4 @@ footer {
   .form > form > ul  > li {
     justify-content: flex-start;
   }
-
-  footer > .social-icons {
-    padding: 13px;
-    margin-bottom: 0;
-    border-top: 1px solid #dfe1e6;
-  }
-
 }
