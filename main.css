@@ -371,6 +371,9 @@ button:active {
     display: flex;
     list-style: none;
   }
+  header>nav>ul>li {
+    margin: 2px;
+  }
 
   header>nav>ul>li>a {
     text-decoration: none;
@@ -381,5 +384,26 @@ button:active {
     font-size: 15px;
     line-height: 20px;
     color: #344563;
+  }
+
+  .headline>.social-icons {
+    margin-top: 36px;
+  }
+
+  .desc {
+    min-height: 96px;
+  }
+  
+  .headline{
+    background: none;
+  }
+
+  .top-section {
+    min-height: 100vh;
+    background: url(img/Header-llustration-desktop.svg);
+  }
+
+  .Works {
+    margin-top: 100px;
   }
 }
