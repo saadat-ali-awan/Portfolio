@@ -75,14 +75,17 @@ header>nav>ul {
   flex-direction: row;
   list-style: none;
   padding: 0;
+  align-items: center;
 }
 
 .headline>.social-icons {
   margin-top: 58px;
 }
 
-.footer>.social-icons {
+footer>.social-icons {
   margin-top: 24px;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-icons>li {
@@ -269,6 +272,7 @@ button:active {
 .about-headline {
   background-image: url(img/illustration-aboutme-mobile.svg);
   padding-top: 30px;
+  background-size: cover;
 }
 
 .About>ul>li>img {
@@ -305,10 +309,10 @@ button:active {
   border-radius: 24px;
 }
 
-.footer {
+footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   padding: 12px;
   margin-top: 30px;
 }
@@ -362,6 +366,11 @@ button:active {
 
 
 @media only screen and (min-width: 992px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
   header {
     justify-content: center;
   }
@@ -413,9 +422,7 @@ button:active {
 
   .Works {
     margin-top: 100px;
-    margin-left: 44px;
-    margin-right: 44px;
-    margin-bottom: 192px;
+    margin-bottom: 96px;
   }
 
   .indicator {
@@ -429,6 +436,64 @@ button:active {
   .portfolio {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 24px;
+  }
+
+  .about-headline {
+    padding-top: 96px;
+  }
+
+  .desc {
+    margin: 24px;
+  }
+
+  .About>ul {
+    margin-top: 52px;
+    flex-direction: row;
+  }
+
+  .About>ul>li {
+    width: calc(33.33% - 24px);
+    box-sizing: border-box;
+  }
+
+  body>section, .form {
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .my-email {
+    display: none;
+  }
+
+  .form-desc {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 52px;
+    margin-right: 24px;
+  }
+  .form > form {
+    flex: 6;
+  }
+
+  .form > form > ul >li {
+    justify-content: flex-start;
+  }
+
+  footer > .social-icons {
+    padding: 13px;
+    margin-top: 100px;
+    margin-bottom: 0;
+    border-top: 1px solid #dfe1e6;
   }
 
 }

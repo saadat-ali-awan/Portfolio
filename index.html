@@ -203,48 +203,50 @@
         </li>
       </ul>
     </section>
-    <section class="footer">
-      <div class="form-desc">
-        I'm always interested in hearing about new projects, so if you'd like to
-        chat please get in touch.
+    <footer>
+      <div class="form">
+        <div class="form-desc">
+          I'm always interested in hearing about new projects, so if you'd like to
+          chat please get in touch.
+        </div>
+        <form
+          action="https://formspree.io/f/xqknezwl "
+          class="contact-form"
+          method="post"
+        >
+          <ul>
+            <li>
+              <input
+                type="text"
+                name="Full_name"
+                placeholder="Full Name"
+                maxlength="30"
+                required
+              />
+            </li>
+            <li>
+              <input
+                type="email"
+                name="email"
+                placeholder="Saadat@gmail.com"
+                required
+              />
+            </li>
+            <li>
+              <textarea
+                name="message"
+                id="msg"
+                placeholder="Enter your message"
+                maxlength="500"
+                required
+              ></textarea>
+            </li>
+            <li>
+              <button type="submit">Get in touch</button>
+            </li>
+          </ul>
+        </form>
       </div>
-      <form
-        action="https://formspree.io/f/xqknezwl "
-        class="contact-form"
-        method="post"
-      >
-        <ul>
-          <li>
-            <input
-              type="text"
-              name="Full_name"
-              placeholder="Full Name"
-              maxlength="30"
-              required
-            />
-          </li>
-          <li>
-            <input
-              type="email"
-              name="email"
-              placeholder="Saadat@gmail.com"
-              required
-            />
-          </li>
-          <li>
-            <textarea
-              name="message"
-              id="msg"
-              placeholder="Enter your message"
-              maxlength="500"
-              required
-            ></textarea>
-          </li>
-          <li>
-            <button type="submit">Get in touch</button>
-          </li>
-        </ul>
-      </form>
       <ul class="social-icons">
         <li>
           <a href="#">
@@ -273,6 +275,6 @@
         </li>
       </ul>
       <div class="my-email">saadatali0202@gmail.com</div>
-    </section>
+    </footer>
   </body>
 </html>
