@@ -328,11 +328,6 @@ button:active {
   height: 114px;
 }
 
-.contact-form > ul > li > input:invalid,
-.contact-form > ul > li > textarea:invalid {
-  border: 1px solid red;
-}
-
 .form-desc {
   font-family: 'Inter', sans-serif;
   font-style: normal;
