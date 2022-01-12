@@ -102,11 +102,20 @@ header>nav>ul {
 }
 
 .Works {
+  margin-bottom: 30px;
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
+.Works>.section-heading {
+  margin-bottom: 62px;
+}
+
+.portfolio {
   display: -ms-grid;
   display: grid;
   column-count: 1;
   row-gap: 24px;
-  padding-bottom: 30px;
 }
 
 .portfolio-card {
@@ -114,8 +123,6 @@ header>nav>ul {
   background: #ebf0ee;
   border: 1px solid #d0d9d4;
   border-radius: 8px;
-  margin-left: 22px;
-  margin-right: 22px;
 }
 
 .card-body {
@@ -401,9 +408,27 @@ button:active {
   .top-section {
     min-height: 100vh;
     background: url(img/Header-llustration-desktop.svg);
+    background-size: cover;
   }
 
   .Works {
     margin-top: 100px;
+    margin-left: 44px;
+    margin-right: 44px;
+    margin-bottom: 192px;
   }
+
+  .indicator {
+    display: none;
+  }
+
+  .Works>.section-heading {
+    margin-bottom: 52px;
+  }
+
+  .portfolio {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 24px;
+  }
+
 }
