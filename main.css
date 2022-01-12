@@ -243,6 +243,23 @@ button:active {
   padding-top: 30px;
 }
 
+.contact-form > ul {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-form > ul > li {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
 .About > ul > li > img {
   width: 44px;
   height: 44px;
@@ -291,23 +308,6 @@ button:active {
   margin-top: 24px;
 }
 
-.contact-form > ul {
-  list-style: none;
-  padding: 0;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.contact-form > ul > li {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-
 .contact-form > ul > li > input,
 .contact-form > ul > li > textarea {
   width: 100%;
@@ -317,20 +317,20 @@ button:active {
   font-size: 15px;
   line-height: 24px;
   color: #6b778c;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #d0d9d4;
   box-sizing: border-box;
   border-radius: 4px;
   padding: 15px;
 }
 
+.contact-form > ul > li > textarea {
+  height: 114px;
+}
+
 .contact-form > ul > li > input:invalid,
 .contact-form > ul > li > textarea:invalid {
   border: 1px solid red;
-}
-
-.contact-form > ul > li > textarea {
-  height: 114px;
 }
 
 .form-desc {
