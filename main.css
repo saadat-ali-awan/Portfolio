@@ -130,6 +130,23 @@ header > nav {
   padding: 0;
 }
 
+.contact-form > ul {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-form > ul > li {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
 .About > ul > li {
   display: flex;
   flex-direction: column;
@@ -241,23 +258,6 @@ button:active {
 .about-headline {
   background-image: url(img/illustration-aboutme-mobile.svg);
   padding-top: 30px;
-}
-
-.contact-form > ul {
-  list-style: none;
-  padding: 0;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.contact-form > ul > li {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin-bottom: 24px;
 }
 
 .About > ul > li > img {
