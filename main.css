@@ -26,6 +26,10 @@ header > nav {
   margin: auto 0;
 }
 
+header > nav > ul {
+  display: none;
+}
+
 .headline {
   background-image: url(img/header-illsutration-mobile.svg);
   display: flex;
@@ -71,14 +75,17 @@ header > nav {
   flex-direction: row;
   list-style: none;
   padding: 0;
+  align-items: center;
+}
+
+footer > .social-icons {
+  margin-top: 24px;
+  align-items: center;
+  justify-content: center;
 }
 
 .headline > .social-icons {
   margin-top: 58px;
-}
-
-.footer > .social-icons {
-  margin-top: 24px;
 }
 
 .social-icons > li {
@@ -98,11 +105,27 @@ header > nav {
 }
 
 .Works {
+  margin-bottom: 30px;
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Works > .section-heading {
+  margin-bottom: 62px;
+}
+
+.portfolio {
   display: -ms-grid;
   display: grid;
   column-count: 1;
   row-gap: 24px;
-  padding-bottom: 30px;
 }
 
 .portfolio-card {
@@ -110,8 +133,6 @@ header > nav {
   background: #ebf0ee;
   border: 1px solid #d0d9d4;
   border-radius: 8px;
-  margin-left: 22px;
-  margin-right: 22px;
 }
 
 .card-body {
@@ -235,13 +256,6 @@ button:active {
   background: #008552;
 }
 
-.section-heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 .section-heading > h2 {
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -258,6 +272,7 @@ button:active {
 .about-headline {
   background-image: url(img/illustration-aboutme-mobile.svg);
   padding-top: 30px;
+  background-size: cover;
 }
 
 .About > ul > li > img {
@@ -294,10 +309,10 @@ button:active {
   border-radius: 24px;
 }
 
-.footer {
+footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   padding: 12px;
   margin-top: 30px;
 }
@@ -347,4 +362,150 @@ button:active {
   line-height: 32px;
   text-align: center;
   color: #42526e;
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  header > a {
+    display: none;
+  }
+
+  header > nav > a {
+    display: none;
+  }
+
+  header > nav > ul {
+    display: flex;
+    list-style: none;
+  }
+
+  header > nav > ul > li {
+    margin: 2px;
+  }
+
+  header > nav > ul > li > a {
+    text-decoration: none;
+    padding: 12px 10px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: #344563;
+  }
+
+  footer > .social-icons {
+    padding: 13px;
+    margin-bottom: 0;
+    border-top: 1px solid #dfe1e6;
+  }
+
+  .headline > .social-icons {
+    margin-top: 36px;
+  }
+
+  .desc {
+    min-height: 96px;
+    margin: 24px;
+  }
+
+  .headline {
+    background: none;
+  }
+
+  .top-section {
+    min-height: 100vh;
+    background: url(img/Header-llustration-desktop.svg);
+    background-size: cover;
+  }
+
+  .Works {
+    margin-top: 100px;
+    margin-bottom: 96px;
+  }
+
+  .indicator {
+    display: none;
+  }
+
+  .Works > .section-heading {
+    margin-bottom: 52px;
+  }
+
+  .portfolio {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 24px;
+  }
+
+  .about-headline {
+    padding-top: 96px;
+    background-image: url(img/illustration\ about\ me\ desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .About {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .About > ul {
+    margin-top: 52px;
+    flex-direction: row;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .About > ul > li {
+    width: calc(33.33% - 24px);
+    box-sizing: border-box;
+  }
+
+  body > section,
+  .form {
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: row;
+    background-image: url(img/illustration-1-contact-form-desktop.svg), url(img/illustration-2-contact-form-desktop.svg), url(img/contact\ form-illustratoin-3-desktop.svg);
+    background-position-x: left, center, right;
+    background-position-y: bottom, bottom, bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+  }
+
+  .my-email {
+    display: none;
+  }
+
+  .form-desc {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 52px;
+    margin-right: 24px;
+  }
+
+  .form > form {
+    flex: 6;
+  }
+
+  .form > form > ul > li {
+    justify-content: flex-start;
+  }
 }
