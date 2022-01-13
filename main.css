@@ -74,6 +74,7 @@ header > nav > ul {
 .desc:hover {
   font-size: 22px;
 }
+
 .social-icons {
   display: flex;
   flex-direction: row;
@@ -90,6 +91,17 @@ footer > .social-icons {
 
 .headline > .social-icons {
   margin-top: 58px;
+}
+
+.About > ul > li > img {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  box-shadow: 0 16px 24px rgba(37, 47, 137, 0.08);
+  border-radius: 50%;
+  padding: 18px;
+  margin-top: 40px;
+  transition: transform 1s;
 }
 
 .social-icons > li {
@@ -285,17 +297,6 @@ button:active {
   background-image: url(img/illustration-aboutme-mobile.svg);
   padding-top: 30px;
   background-size: cover;
-}
-
-.About > ul > li > img {
-  width: 44px;
-  height: 44px;
-  background: #fff;
-  box-shadow: 0 16px 24px rgba(37, 47, 137, 0.08);
-  border-radius: 50%;
-  padding: 18px;
-  margin-top: 40px;
-  transition: transform 1s;
 }
 
 .About > ul > li > img:hover {
