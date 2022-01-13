@@ -501,7 +501,8 @@ footer {
   .form {
     display: flex;
     flex-direction: row;
-    background-image: url(img/illustration-1-contact-form-desktop.svg),
+    background-image:
+    url(img/illustration-1-contact-form-desktop.svg),
       url(img/illustration-2-contact-form-desktop.svg),
       url(img/contact\ form-illustratoin-3-desktop.svg);
     background-position-x: left, center, right;
