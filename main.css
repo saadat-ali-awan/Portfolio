@@ -92,6 +92,14 @@ footer > .social-icons {
   margin: 10px;
 }
 
+.social-icons > li > a > img {
+  transition: transform 1s;
+}
+
+.social-icons > li > a > img:hover {
+  transform: rotate(180deg);
+}
+
 .down-btn {
   border: 1px solid #dfe1e6;
   border-radius: 32px;
@@ -400,6 +408,11 @@ footer {
     font-size: 15px;
     line-height: 20px;
     color: #344563;
+    transition: font-size 1s;
+  }
+
+  header > nav > ul > li > a:hover {
+    font-size: 18px;
   }
 
   footer > .social-icons {
