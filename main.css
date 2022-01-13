@@ -68,8 +68,12 @@ header > nav > ul {
   text-align: center;
   color: #172b4d;
   margin: 12px;
+  transition: font-size 1s;
 }
 
+.desc:hover {
+  font-size: 22px;
+}
 .social-icons {
   display: flex;
   flex-direction: row;
@@ -291,6 +295,11 @@ button:active {
   border-radius: 50%;
   padding: 18px;
   margin-top: 40px;
+  transition: transform 1s;
+}
+
+.About > ul > li > img:hover {
+  transform: rotate(90deg);
 }
 
 .About > ul > li > ul > li {
@@ -491,7 +500,9 @@ footer {
   .form {
     display: flex;
     flex-direction: row;
-    background-image: url(img/illustration-1-contact-form-desktop.svg), url(img/illustration-2-contact-form-desktop.svg), url(img/contact\ form-illustratoin-3-desktop.svg);
+    background-image: url(img/illustration-1-contact-form-desktop.svg),
+      url(img/illustration-2-contact-form-desktop.svg),
+      url(img/contact\ form-illustratoin-3-desktop.svg);
     background-position-x: left, center, right;
     background-position-y: bottom, bottom, bottom;
     background-repeat: no-repeat;
