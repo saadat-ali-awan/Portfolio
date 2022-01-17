@@ -68,6 +68,11 @@ header > nav > ul {
   text-align: center;
   color: #172b4d;
   margin: 12px;
+  transition: font-size 1s;
+}
+
+.desc:hover {
+  font-size: 22px;
 }
 
 .social-icons {
@@ -88,8 +93,27 @@ footer > .social-icons {
   margin-top: 58px;
 }
 
+.About > ul > li > img {
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  box-shadow: 0 16px 24px rgba(37, 47, 137, 0.08);
+  border-radius: 50%;
+  padding: 18px;
+  margin-top: 40px;
+  transition: transform 1s;
+}
+
 .social-icons > li {
   margin: 10px;
+}
+
+.social-icons > li > a > img {
+  transition: transform 1s;
+}
+
+.social-icons > li > a > img:hover {
+  transform: rotate(180deg);
 }
 
 .down-btn {
@@ -275,14 +299,8 @@ button:active {
   background-size: cover;
 }
 
-.About > ul > li > img {
-  width: 44px;
-  height: 44px;
-  background: #fff;
-  box-shadow: 0 16px 24px rgba(37, 47, 137, 0.08);
-  border-radius: 50%;
-  padding: 18px;
-  margin-top: 40px;
+.About > ul > li > img:hover {
+  transform: rotate(90deg);
 }
 
 .About > ul > li > ul > li {
@@ -400,6 +418,11 @@ footer {
     font-size: 15px;
     line-height: 20px;
     color: #344563;
+    transition: font-size 1s;
+  }
+
+  header > nav > ul > li > a:hover {
+    font-size: 18px;
   }
 
   footer > .social-icons {
@@ -478,7 +501,10 @@ footer {
   .form {
     display: flex;
     flex-direction: row;
-    background-image: url(img/illustration-1-contact-form-desktop.svg), url(img/illustration-2-contact-form-desktop.svg), url(img/contact\ form-illustratoin-3-desktop.svg);
+    background-image:
+      url(img/illustration-1-contact-form-desktop.svg),
+      url(img/illustration-2-contact-form-desktop.svg),
+      url(img/contact\ form-illustratoin-3-desktop.svg);
     background-position-x: left, center, right;
     background-position-y: bottom, bottom, bottom;
     background-repeat: no-repeat;
