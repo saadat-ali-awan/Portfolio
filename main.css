@@ -195,7 +195,7 @@ footer > .social-icons {
 .About > ul > li {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-color: #ebf0ee;
   border: 1px solid #c1c7d0;
