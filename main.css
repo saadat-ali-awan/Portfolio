@@ -545,4 +545,8 @@ footer {
   .form > form > ul > li {
     justify-content: flex-start;
   }
+
+  header > nav > ul > li:nth-child(1) {
+    display: none;
+  }
 }
