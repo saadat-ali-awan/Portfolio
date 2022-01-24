@@ -38,26 +38,6 @@ header > nav > ul {
   padding: 24px;
 }
 
-.toggle-mobile-menu {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
-  list-style: none;
-  line-height: 72px;
-  font-family: Inter, sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 32px;
-  padding: 0 28px;
-  box-sizing: border-box;
-  margin: 0;
-}
-
 .toggle-mobile-menu > li a {
   text-decoration: inherit;
   color: inherit;
@@ -409,6 +389,28 @@ footer {
   line-height: 32px;
   text-align: center;
   color: #42526e;
+}
+
+@media screen and (max-width: 991px) {
+  .toggle-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    list-style: none;
+    line-height: 72px;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    padding: 0 28px;
+    box-sizing: border-box;
+    margin: 0;
+  }
 }
 
 @media only screen and (min-width: 992px) {
