@@ -38,6 +38,15 @@ header > nav > ul {
   padding: 24px;
 }
 
+.toggle-mobile-menu > li a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.toggle-mobile-menu > li:nth-child(1) a {
+  float: right;
+}
+
 .headline-text > h1 {
   width: 70vw;
   font-family: 'Inter', sans-serif;
@@ -382,6 +391,28 @@ footer {
   color: #42526e;
 }
 
+@media screen and (max-width: 991px) {
+  .toggle-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    list-style: none;
+    line-height: 72px;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    padding: 0 28px;
+    box-sizing: border-box;
+    margin: 0;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   body {
     margin: 0;
@@ -533,5 +564,9 @@ footer {
 
   .form > form > ul > li {
     justify-content: flex-start;
+  }
+
+  header > nav > ul > li:nth-child(1) {
+    display: none;
   }
 }
