@@ -47,6 +47,24 @@ header > nav > ul {
   width: 100vw;
   height: 100vh;
   background-color: white;
+  list-style: none;
+  line-height: 72px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  padding: 0 28px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.toggle-mobile-menu > li a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.toggle-mobile-menu > li:nth-child(1) a {
+  float: right;
 }
 
 .headline-text > h1 {
