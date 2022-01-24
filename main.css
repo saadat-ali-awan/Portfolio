@@ -38,6 +38,17 @@ header > nav > ul {
   padding: 24px;
 }
 
+.toggle-mobile-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
 .headline-text > h1 {
   width: 70vw;
   font-family: 'Inter', sans-serif;
