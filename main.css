@@ -126,6 +126,10 @@ footer > .social-icons {
   transition: transform 1s;
 }
 
+.popUpScreen .content img {
+  width: 100%;
+}
+
 .social-icons > li > a > img:hover {
   transform: rotate(180deg);
 }
@@ -219,8 +223,8 @@ footer > .social-icons {
 }
 
 .card-body > ul,
-.popUpScreen > ul,
-.About > ul > li > ul {
+.About > ul > li > ul,
+.popUpScreen > .content > ul {
   list-style: none;
   display: flex;
   padding: 0;
@@ -229,7 +233,6 @@ footer > .social-icons {
   flex-wrap: wrap;
 }
 
-.popUpScreen > ul > li,
 .card-body > ul > li {
   color: #3a4a42;
   padding: 8px 12px;
@@ -238,7 +241,6 @@ footer > .social-icons {
 }
 
 .card-body > ul > li,
-.popUpScreen > ul > li,
 .About > ul > li > ul > li {
   display: flex;
   flex-direction: row;
@@ -254,6 +256,33 @@ footer > .social-icons {
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.03em;
+}
+
+.About > ul > li > ul > li {
+  color: #36b37e;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.popUpScreen > .content > ul > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0 4px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3a4a42;
+  padding: 8px 12px;
+  background: #ebf0ee;
+  border-radius: 4px;
 }
 
 .card-body > h3 {
@@ -272,8 +301,9 @@ footer > .social-icons {
   margin: 16px 0;
 }
 
-.popUpScreen p {
+.popUpScreen > .content p {
   overflow-y: scroll;
+  color: #344563;
 }
 
 button {
@@ -322,13 +352,6 @@ button:active {
 
 .About > ul > li > img:hover {
   transform: rotate(90deg);
-}
-
-.About > ul > li > ul > li {
-  color: #36b37e;
-  padding: 12px;
-  background: #fff;
-  border-radius: 8px;
 }
 
 .About > ul > li > h3 {
@@ -429,10 +452,6 @@ footer {
   padding: 16px 16px 20px 16px;
 }
 
-.popUpScreen .content img {
-    width: 100%;
-}
-
 .close-popup-btn {
   position: fixed;
   top: 58px;
@@ -447,8 +466,8 @@ footer {
 }
 
 .actions a button {
-    width: 100%;
-    justify-content: center;
+  width: 100%;
+  justify-content: center;
 }
 
 @media screen and (max-width: 991px) {
