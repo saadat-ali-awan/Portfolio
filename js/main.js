@@ -31,7 +31,7 @@ const projects = [
       'Codepen',
     ],
     'live-version': 'https://saadat123456.github.io/Portfolio/',
-    'repo-link': 'https://github.com/Saadat123456/Portfolio'
+    'repo-link': 'https://github.com/Saadat123456/Portfolio',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
@@ -46,7 +46,7 @@ const projects = [
       'Codepen',
     ],
     'live-version': 'https://saadat123456.github.io/Portfolio/',
-    'repo-link': 'https://github.com/Saadat123456/Portfolio'
+    'repo-link': 'https://github.com/Saadat123456/Portfolio',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
@@ -61,7 +61,7 @@ const projects = [
       'Codepen',
     ],
     'live-version': 'https://saadat123456.github.io/Portfolio/',
-    'repo-link': 'https://github.com/Saadat123456/Portfolio'
+    'repo-link': 'https://github.com/Saadat123456/Portfolio',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
@@ -76,7 +76,7 @@ const projects = [
       'Codepen',
     ],
     'live-version': 'https://saadat123456.github.io/Portfolio/',
-    'repo-link': 'https://github.com/Saadat123456/Portfolio'
+    'repo-link': 'https://github.com/Saadat123456/Portfolio',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
@@ -91,7 +91,7 @@ const projects = [
       'Codepen',
     ],
     'live-version': 'https://saadat123456.github.io/Portfolio/',
-    'repo-link': 'https://github.com/Saadat123456/Portfolio'
+    'repo-link': 'https://github.com/Saadat123456/Portfolio',
   },
   {
     name: 'Multi-Post Stories Gain+Glory',
@@ -106,7 +106,7 @@ const projects = [
       'Codepen',
     ],
     'live-version': 'https://saadat123456.github.io/Portfolio/',
-    'repo-link': 'https://github.com/Saadat123456/Portfolio'
+    'repo-link': 'https://github.com/Saadat123456/Portfolio',
   },
 ];
 

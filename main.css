@@ -316,7 +316,8 @@ footer > .social-icons {
   color: #344563;
 }
 
-button {
+button,
+a[type="button"] {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -333,11 +334,13 @@ button {
   border: 0;
 }
 
-button:hover {
+button:hover,
+a[type="button"] {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
 }
 
-button:active {
+button:active,
+a[type="button"] {
   background: #008552;
 }
 
@@ -477,6 +480,10 @@ footer {
 .actions a button {
   width: 100%;
   justify-content: center;
+}
+
+#popUpModal {
+  display: none;
 }
 
 @media screen and (max-width: 991px) {
