@@ -399,6 +399,7 @@ footer {
   top: 0;
   left: 0;
   filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .popUpScreen {
@@ -417,7 +418,9 @@ footer {
 }
 
 .close-popup-btn {
-  position: absolute;
+  position: fixed;
+  top: 58px;
+  right: 54px;
 }
 
 @media screen and (max-width: 991px) {
