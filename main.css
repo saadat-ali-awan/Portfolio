@@ -107,6 +107,10 @@ footer > .social-icons {
   margin-top: 58px;
 }
 
+.popUpScreen img {
+  width: 100%;
+}
+
 .About > ul > li > img {
   width: 44px;
   height: 44px;
@@ -124,10 +128,6 @@ footer > .social-icons {
 
 .social-icons > li > a > img {
   transition: transform 1s;
-}
-
-.popUpScreen .content img {
-  width: 100%;
 }
 
 .social-icons > li > a > img:hover {
@@ -224,13 +224,27 @@ footer > .social-icons {
 
 .card-body > ul,
 .About > ul > li > ul,
-.popUpScreen > .content > ul {
+.popUpScreen > ul {
   list-style: none;
   display: flex;
   padding: 0;
   justify-content: center;
   margin: 0;
   flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.actions {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    grid-row-end: span 1;
+    font-size: 15px;
+    line-height: 20px;
+    display: grid;
+    column-gap: 4px;
+    -ms-grid-columns: auto auto;
+    grid-template-columns: auto auto;
 }
 
 .card-body > ul > li {
@@ -265,7 +279,7 @@ footer > .social-icons {
   border-radius: 8px;
 }
 
-.popUpScreen > .content > ul > li {
+.popUpScreen > ul > li {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -439,7 +453,7 @@ footer {
 
 .popUpScreen {
   box-sizing: border-box;
-  display: flex;
+  display: grid;
   flex-direction: column;
   height: calc(100vh - 40px);
   width: calc(100vw - 32px);
@@ -451,7 +465,10 @@ footer {
   border-radius: 16px;
   padding: 16px 16px 20px 16px;
   align-content: stretch;
+  grid-template-rows: auto auto auto auto 48px;
 }
+
+.popUpScreen > p {}
 
 .content {
   flex: 1 0 auto;
@@ -461,13 +478,6 @@ footer {
   position: fixed;
   top: 58px;
   right: 54px;
-}
-
-.actions {
-  display: grid;
-  column-gap: 4px;
-  -ms-grid-columns: auto auto;
-  grid-template-columns: auto auto;
 }
 
 .actions a button {
@@ -584,6 +594,7 @@ footer {
   }
 
   .close-popup-btn {
+    box-sizing: border-box;
     position: relative;
     width: 40px;
     padding: 14px;
@@ -594,7 +605,28 @@ footer {
     bottom: 0;
     right: 0;
     margin-bottom: 20px;
+    grid-column-start: 3;
   }
+
+.popUpScreen img {
+    grid-column-end: span 3;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.popUpScreen > ul {
+    grid-column-start: 1;
+    grid-row-start: 5;
+}
+
+.popUpScreen > h1 {
+    grid-row-end: span 2;
+}
+
+.popUpScreen > p {
+    grid-row-start: 6;
+    grid-column-end: span 3;
+}
 
   .popUpScreen {
     padding: 24px;
@@ -602,6 +634,9 @@ footer {
     width: calc(100vw - 520px);
     top: 122px;
     left: 260px;
+    display: grid;
+    grid-template-columns: 60% auto 40px;
+    grid-template-rows: auto auto 28px auto auto;
   }
 
   .about-headline {
