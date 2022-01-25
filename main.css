@@ -4,6 +4,11 @@ header {
   padding: 12px;
 }
 
+a,
+a * {
+  text-decoration: inherit;
+}
+
 header > a {
   text-decoration: none;
 }
@@ -421,6 +426,11 @@ footer {
   position: fixed;
   top: 58px;
   right: 54px;
+}
+
+.actions {
+  display: grid;
+  row-gap: 4px;
 }
 
 @media screen and (max-width: 991px) {
