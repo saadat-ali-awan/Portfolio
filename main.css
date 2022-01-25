@@ -450,6 +450,11 @@ footer {
   left: 16px;
   border-radius: 16px;
   padding: 16px 16px 20px 16px;
+  align-content: stretch;
+}
+
+.content {
+  flex: 1 0 auto;
 }
 
 .close-popup-btn {
