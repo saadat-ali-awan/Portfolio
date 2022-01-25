@@ -317,7 +317,7 @@ footer > .social-icons {
 }
 
 button,
-a[type="button"] {
+a[data-button] {
   display: flex;
   flex-direction: row;
   align-items: center;
