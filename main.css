@@ -587,10 +587,21 @@ footer {
     position: relative;
     width: 40px;
     padding: 14px;
-    margin-bottom: 54px;
     display: inline-block;
-    background: #EBECF0;
+    background: #ebecf0;
     float: right;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 20px;
+  }
+
+  .popUpScreen {
+    padding: 24px;
+    height: calc(100vh - 244px);
+    width: calc(100vw - 520px);
+    top: 122px;
+    left: 260px;
   }
 
   .about-headline {
