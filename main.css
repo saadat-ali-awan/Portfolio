@@ -583,6 +583,16 @@ footer {
     column-gap: 24px;
   }
 
+  .close-popup-btn {
+    position: relative;
+    width: 40px;
+    padding: 14px;
+    margin-bottom: 54px;
+    display: inline-block;
+    background: #EBECF0;
+    float: right;
+  }
+
   .about-headline {
     padding-top: 96px;
     background-image: url(img/illustration\ about\ me\ desktop.svg);
