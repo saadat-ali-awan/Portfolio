@@ -406,12 +406,18 @@ footer {
   display: flex;
   flex-direction: column;
   height: calc(100vh - 40px);
-  width: 100vw;
+  width: calc(100vw - 32px);
   background: #ffffffe5;
   z-index: 10000;
   position: fixed;
   top: 20px;
   left: 16px;
+  border-radius: 16px;
+  padding: 16px 16px 20px 16px;
+}
+
+.close-popup-btn {
+  position: absolute;
 }
 
 @media screen and (max-width: 991px) {
