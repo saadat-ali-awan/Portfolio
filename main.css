@@ -219,6 +219,7 @@ footer > .social-icons {
 }
 
 .card-body > ul,
+.popUpScreen > ul,
 .About > ul > li > ul {
   list-style: none;
   display: flex;
@@ -228,6 +229,7 @@ footer > .social-icons {
   flex-wrap: wrap;
 }
 
+.popUpScreen > ul > li,
 .card-body > ul > li {
   color: #3a4a42;
   padding: 8px 12px;
@@ -236,6 +238,7 @@ footer > .social-icons {
 }
 
 .card-body > ul > li,
+.popUpScreen > ul > li,
 .About > ul > li > ul > li {
   display: flex;
   flex-direction: row;
@@ -267,6 +270,10 @@ footer > .social-icons {
   order: 0;
   flex-grow: 0;
   margin: 16px 0;
+}
+
+.popUpScreen p {
+  overflow-y: scroll;
 }
 
 button {
@@ -422,6 +429,10 @@ footer {
   padding: 16px 16px 20px 16px;
 }
 
+.popUpScreen .content img {
+    width: 100%;
+}
+
 .close-popup-btn {
   position: fixed;
   top: 58px;
@@ -430,7 +441,14 @@ footer {
 
 .actions {
   display: grid;
-  row-gap: 4px;
+  column-gap: 4px;
+  -ms-grid-columns: auto auto;
+  grid-template-columns: auto auto;
+}
+
+.actions a button {
+    width: 100%;
+    justify-content: center;
 }
 
 @media screen and (max-width: 991px) {
