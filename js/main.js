@@ -1,8 +1,16 @@
-const formData = {
+const formData = localStorage.getItem('form-data')?JSON.parse(localStorage.getItem('form-data')):{
   Full_name: '',
   email: '',
   message: '',
 };
+
+let form;
+
+function loadData(tempFormData) {
+  Object.keys(tempFormData).forEach((inputName) => {
+    form[inputName].value = tempFormData[inputName];
+  });
+}
 
 function saveData(tempFormData) {
   localStorage.setItem('form-data', JSON.stringify(tempFormData));
@@ -13,6 +21,9 @@ function menuToggle() {
 }
 
 window.addEventListener('load', () => {
+
+  form = document.getElementById('contact-me-form');
+  loadData(formData);
   document.querySelector('#menu-btn').addEventListener('click', () => {
     menuToggle();
   });
@@ -20,8 +31,6 @@ window.addEventListener('load', () => {
   document.querySelector('#nav-menu').addEventListener('click', () => {
     menuToggle();
   });
-
-  const form = document.getElementById('contact-me-form');
 
   form.addEventListener('submit', (event) => {
     if (document.querySelector('small')) form.removeChild(document.querySelector('small'));
