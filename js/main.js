@@ -1,4 +1,4 @@
-const formData = localStorage.getItem('form-data')?JSON.parse(localStorage.getItem('form-data')):{
+const formData = localStorage.getItem('form-data') ? JSON.parse(localStorage.getItem('form-data')) : {
   Full_name: '',
   email: '',
   message: '',
@@ -21,7 +21,6 @@ function menuToggle() {
 }
 
 window.addEventListener('load', () => {
-
   form = document.getElementById('contact-me-form');
   loadData(formData);
   document.querySelector('#menu-btn').addEventListener('click', () => {
