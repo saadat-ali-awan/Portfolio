@@ -3,18 +3,38 @@ function menuToggle() {
 }
 
 function modalTemplate(obj) {
-  document.querySelector('.popUpScreen h1').textContent = obj.name;
-  document.querySelector('.popUpScreen p').textContent = obj.description;
-  document.querySelector('.popUpScreen > img').src = obj['featured-image'];
-  document.querySelector('.popUpScreen ul').innerHTML = '';
+  document.querySelector('.popupContent h1').textContent = obj.name;
+  document.querySelector('.popupContent p').textContent = obj.description;
+  document.querySelector('.popupContent > img').src = obj['featured-image'];
+  document.querySelector('.popupContent ul').innerHTML = '';
   obj.technologies.forEach((x) => {
     const li = document.createElement('li');
     li.textContent = x;
-    document.querySelector('.popUpScreen ul').appendChild(li);
+    document.querySelector('.popupContent ul').appendChild(li);
   });
-  document.querySelector('.popUpScreen .actions a:nth-child(1)').href = obj['live-version'];
-  document.querySelector('.popUpScreen .actions a:nth-child(2)').href = obj['repo-link'];
-  document.querySelector('#popUpModal').style.display = 'block';
+  document.querySelector('.popupContent .actions a:nth-child(1)').href = obj['live-version'];
+  document.querySelector('.popupContent .actions a:nth-child(2)').href = obj['repo-link'];
+  document.querySelector('#popUpModal').style.display = 'flex';
+}
+
+function cardsTemplate(project, index) {
+  return `<div class="portfolio-card">
+    <div class="card-body">
+      <h3>${project.name}</h3>
+      <ul> ${project.technologies.map((tech) => `<li>${tech}</li>`).join('')}</ul>
+      <button type="button" data-number="${index}">See Project</button>
+    </div>
+  </div>`;
+}
+
+function onWindowResize() {
+  if (window.innerWidth > 992) {
+    document.querySelector('.close-popup-btn > img').src = 'img/close-desktop.svg';
+    document.querySelector('#popupProjectImage').src = 'img/SnapshootPortfolioDesktop.png';
+  } else {
+    document.querySelector('.close-popup-btn > img').src = 'img/popup-close-icon.svg';
+    document.querySelector('#popupProjectImage').src = 'img/SnapshootPortfolio.svg';
+  }
 }
 
 const projects = [
@@ -111,6 +131,13 @@ const projects = [
 ];
 
 window.addEventListener('load', () => {
+  onWindowResize();
+
+  const portfolioRef = document.querySelector('.portfolio');
+  projects.forEach((project, index) => {
+    portfolioRef.innerHTML += cardsTemplate(project, index);
+  });
+
   document.querySelector('#menu-btn').addEventListener('click', () => {
     menuToggle();
   });
@@ -127,7 +154,12 @@ window.addEventListener('load', () => {
     });
   });
 
-  document.querySelector('.close-popup-btn').addEventListener('click', () => {
+  document.querySelector('.close-popup-btn').addEventListener('click', (event) => {
+    event.preventDefault();
     document.querySelector('#popUpModal').style.display = 'none';
   });
+
+  window.addEventListener('resize', () => {
+    onWindowResize();
+  }, true);
 });

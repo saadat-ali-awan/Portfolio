@@ -13,6 +13,33 @@ header > a {
   text-decoration: none;
 }
 
+.close-popup-btn > img {
+  width: 12px;
+  margin-bottom: -44px;
+  margin-right: 22px;
+  z-index: 100000;
+}
+
+.popupTechnologies > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0 4px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3a4a42;
+  padding: 8px 12px;
+  background: #ebf0ee;
+  border-radius: 4px;
+}
+
 header > a > p {
   left: 12px;
   width: 90px;
@@ -207,12 +234,11 @@ footer > .social-icons {
 }
 
 .card-body > ul,
-.popUpScreen > ul,
+.popupTechnologies,
 .About > ul > li > ul {
   list-style: none;
   display: flex;
   padding: 0;
-  justify-content: center;
   margin: 0;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -231,39 +257,14 @@ footer > .social-icons {
 }
 
 .actions {
-  grid-row-start: 3;
-  grid-column-start: 2;
-  grid-column-end: span 2;
-  grid-row-end: span 1;
   font-size: 15px;
   line-height: 20px;
-  display: grid;
-  column-gap: 4px;
-  -ms-grid-columns: auto auto;
-  grid-template-columns: auto auto;
+  display: flex;
+  column-gap: 12px;
+  grid-area: buttons;
 }
 
 .card-body > ul > li {
-  color: #3a4a42;
-  padding: 8px 12px;
-  background: #ebf0ee;
-  border-radius: 4px;
-}
-
-.popUpScreen > ul > li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0 4px;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
   color: #3a4a42;
   padding: 8px 12px;
   background: #ebf0ee;
@@ -311,11 +312,6 @@ footer > .social-icons {
   margin: 16px 0;
 }
 
-.popUpScreen > .content p {
-  overflow-y: scroll;
-  color: #344563;
-}
-
 button,
 a[data-button] {
   display: flex;
@@ -327,11 +323,17 @@ a[data-button] {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 1em;
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #fff;
   border: 0;
+}
+
+a[data-button] {
+  width: 100%;
+  height: max-content;
+  justify-content: center;
 }
 
 button:hover,
@@ -467,14 +469,9 @@ footer {
   grid-template-rows: auto auto auto auto 48px;
 }
 
-.content {
-  flex: 1 0 auto;
-}
-
 .close-popup-btn {
-  position: fixed;
-  top: 58px;
-  right: 54px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .actions a button {
@@ -484,6 +481,62 @@ footer {
 
 #popUpModal {
   display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.popupContent {
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  padding: 16px;
+  padding-bottom: 20px;
+  background-color: white;
+  border-radius: 16px;
+  width: 90%;
+  height: 90%;
+}
+
+.popupDetails {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'technologies technologies technologies'
+    'description description description'
+    'buttons buttons buttons';
+}
+
+.popupHeader {
+  grid-area: header;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+  margin: 0 12px;
+}
+
+.popupTechnologies {
+  grid-area: technologies;
+}
+
+.popupDesc {
+  grid-area: description;
+}
+
+.popupDetails > p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: #344563;
 }
 
 @media screen and (max-width: 991px) {
@@ -594,22 +647,6 @@ footer {
     column-gap: 24px;
   }
 
-  .close-popup-btn {
-    box-sizing: border-box;
-    position: relative;
-    width: 40px;
-    height: 40px;
-    padding: 14px;
-    display: inline-block;
-    background: #ebecf0;
-    float: right;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin-bottom: 20px;
-    grid-column-start: 3;
-  }
-
   .popUpScreen img {
     grid-column-end: span 3;
     max-height: 300px;
@@ -710,5 +747,48 @@ footer {
 
   header > nav > ul > li:nth-child(1) {
     display: none;
+  }
+
+  .popupDetails {
+    display: grid;
+    grid-template-areas:
+      'header header buttons'
+      'technologies technologies technologies'
+      'description description description' !important;
+    margin-top: 24px;
+  }
+
+  .popupContent {
+    padding: 24px;
+    padding-bottom: 44px;
+    background-color: white;
+    border-radius: 8px;
+    width: calc(100vw - 260px - 260px);
+  }
+
+  .close-popup-btn {
+    box-sizing: border-box;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 14px;
+    display: inline-block;
+    background: #ebecf0;
+    float: right;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 14px;
+    margin-right: 0;
+    grid-column-start: 3;
+    mix-blend-mode: multiply;
+    border-radius: 8px;
+    align-self: end;
+  }
+
+  .close-popup-btn > img {
+    margin-bottom: 0;
+    margin-right: 0;
+    z-index: 100000;
   }
 }
