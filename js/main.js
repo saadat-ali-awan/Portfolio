@@ -1,3 +1,13 @@
+const formData = {
+  Full_name: '',
+  email: '',
+  message: '',
+};
+
+function saveData(tempFormData) {
+  localStorage.setItem('form-data', JSON.stringify(tempFormData));
+}
+
 function menuToggle() {
   document.querySelector('#nav-menu').classList.toggle('toggle-mobile-menu');
 }
@@ -23,5 +33,13 @@ window.addEventListener('load', () => {
       listItem.append(errorMessage);
       form.querySelector('ul').append(listItem);
     }
+  });
+
+  document.querySelectorAll('input, textarea').forEach((inp) => {
+    inp.addEventListener('change', () => {
+      const inputName = inp.getAttribute('name');
+      formData[inputName] = inp.value;
+      saveData(formData);
+    });
   });
 });
