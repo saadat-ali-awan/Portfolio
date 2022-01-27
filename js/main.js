@@ -10,4 +10,10 @@ window.addEventListener('load', () => {
   document.querySelector('#nav-menu').addEventListener('click', () => {
     menuToggle();
   });
+  const form = document.getElementById('contact-me-form');
+  form.addEventListener('submit', (event) => {
+      if(form.email.value !== form.email.value.toLowerCase()){
+          event.preventDefault();
+      }
+  })
 });
