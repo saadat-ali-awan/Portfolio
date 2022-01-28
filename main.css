@@ -4,8 +4,40 @@ header {
   padding: 12px;
 }
 
+a,
+a * {
+  text-decoration: inherit;
+}
+
 header > a {
   text-decoration: none;
+}
+
+.close-popup-btn > img {
+  width: 12px;
+  margin-bottom: -44px;
+  margin-right: 22px;
+  z-index: 100000;
+}
+
+.popupTechnologies > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0 4px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3a4a42;
+  padding: 8px 12px;
+  background: #ebf0ee;
+  border-radius: 4px;
 }
 
 header > a > p {
@@ -208,6 +240,17 @@ footer > .social-icons {
   margin-bottom: 24px;
 }
 
+.card-body > ul,
+.popupTechnologies,
+.About > ul > li > ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
 .About > ul > li {
   display: flex;
   flex-direction: column;
@@ -220,14 +263,12 @@ footer > .social-icons {
   margin: 12px;
 }
 
-.card-body > ul,
-.About > ul > li > ul {
-  list-style: none;
+.actions {
+  font-size: 15px;
+  line-height: 20px;
   display: flex;
-  padding: 0;
-  justify-content: center;
-  margin: 0;
-  flex-wrap: wrap;
+  column-gap: 12px;
+  grid-area: buttons;
 }
 
 .card-body > ul > li {
@@ -255,6 +296,13 @@ footer > .social-icons {
   letter-spacing: 0.03em;
 }
 
+.About > ul > li > ul > li {
+  color: #36b37e;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+}
+
 .card-body > h3 {
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -271,7 +319,8 @@ footer > .social-icons {
   margin: 16px 0;
 }
 
-button {
+button,
+a[data-button] {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -281,18 +330,26 @@ button {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 1em;
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #fff;
   border: 0;
 }
 
-button:hover {
+a[data-button] {
+  width: 100%;
+  height: max-content;
+  justify-content: center;
+}
+
+button:hover,
+a[type="button"] {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
 }
 
-button:active {
+button:active,
+a[type="button"] {
   background: #008552;
 }
 
@@ -317,13 +374,6 @@ button:active {
 
 .About > ul > li > img:hover {
   transform: rotate(90deg);
-}
-
-.About > ul > li > ul > li {
-  color: #36b37e;
-  padding: 12px;
-  background: #fff;
-  border-radius: 8px;
 }
 
 .About > ul > li > h3 {
@@ -396,6 +446,104 @@ footer {
   line-height: 32px;
   text-align: center;
   color: #42526e;
+}
+
+.backdrop {
+  background: #c1c7d0e5;
+  position: fixed;
+  width: 100vw;
+  height: 1000vh;
+  top: 0;
+  left: 0;
+  filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.popUpScreen {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 40px);
+  width: calc(100vw - 32px);
+  background: #ffffffe5;
+  z-index: 10000;
+  position: fixed;
+  top: 20px;
+  left: 16px;
+  border-radius: 16px;
+  padding: 16px 16px 20px 16px;
+  align-content: stretch;
+  grid-template-rows: auto auto auto auto 48px;
+}
+
+.close-popup-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actions a button {
+  width: 100%;
+  justify-content: center;
+}
+
+#popUpModal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.popupContent {
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  padding: 16px;
+  padding-bottom: 20px;
+  background-color: white;
+  border-radius: 16px;
+  width: 90%;
+  height: 90%;
+}
+
+.popupDetails {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'technologies technologies technologies'
+    'description description description'
+    'buttons buttons buttons';
+}
+
+.popupHeader {
+  grid-area: header;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+  margin: 0 12px;
+}
+
+.popupTechnologies {
+  grid-area: technologies;
+}
+
+.popupDesc {
+  grid-area: description;
+}
+
+.popupDetails > p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: #344563;
 }
 
 @media screen and (max-width: 991px) {
@@ -506,6 +654,37 @@ footer {
     column-gap: 24px;
   }
 
+  .popUpScreen img {
+    grid-column-end: span 3;
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  .popUpScreen > ul {
+    grid-column-start: 1;
+    grid-row-start: 5;
+  }
+
+  .popUpScreen > h1 {
+    grid-row-end: span 2;
+  }
+
+  .popUpScreen > p {
+    grid-row-start: 6;
+    grid-column-end: span 3;
+  }
+
+  .popUpScreen {
+    padding: 24px;
+    height: calc(100vh - 244px);
+    width: calc(100vw - 520px);
+    top: 122px;
+    left: 260px;
+    display: grid;
+    grid-template-columns: 60% auto 40px;
+    grid-template-rows: auto auto 28px auto auto;
+  }
+
   .about-headline {
     padding-top: 96px;
     background-image: url(img/illustration\ about\ me\ desktop.svg);
@@ -575,5 +754,48 @@ footer {
 
   header > nav > ul > li:nth-child(1) {
     display: none;
+  }
+
+  .popupDetails {
+    display: grid;
+    grid-template-areas:
+      'header header buttons'
+      'technologies technologies technologies'
+      'description description description' !important;
+    margin-top: 24px;
+  }
+
+  .popupContent {
+    padding: 24px;
+    padding-bottom: 44px;
+    background-color: white;
+    border-radius: 8px;
+    width: calc(100vw - 260px - 260px);
+  }
+
+  .close-popup-btn {
+    box-sizing: border-box;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 14px;
+    display: inline-block;
+    background: #ebecf0;
+    float: right;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 14px;
+    margin-right: 0;
+    grid-column-start: 3;
+    mix-blend-mode: multiply;
+    border-radius: 8px;
+    align-self: end;
+  }
+
+  .close-popup-btn > img {
+    margin-bottom: 0;
+    margin-right: 0;
+    z-index: 100000;
   }
 }
