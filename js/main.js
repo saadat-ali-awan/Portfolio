@@ -149,7 +149,6 @@ const projects = [
 ];
 
 window.addEventListener('load', () => {
-
   onWindowResize();
 
   const portfolioRef = document.querySelector('.portfolio');
@@ -166,7 +165,6 @@ window.addEventListener('load', () => {
   document.querySelector('#nav-menu').addEventListener('click', () => {
     menuToggle();
   });
-
 
   const popUpButtons = document.querySelectorAll('button[data-number]');
   popUpButtons.forEach((btn) => {
@@ -204,5 +202,4 @@ window.addEventListener('load', () => {
       saveData(formData);
     });
   });
-
 });
